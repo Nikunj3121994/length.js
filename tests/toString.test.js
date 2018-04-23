@@ -1,15 +1,21 @@
-const length = require('../length');
+import length from '../length';
+import { standardUnitDependences } from '../src/lib/units';
 
-describe('getString()', () => {
+describe('toString()', () => {
+  const tests = [];
+  Object.keys(standardUnitDependences).forEach((unit) => {
+    tests.push([Math.random(), unit]);
+  });
+
   it('Should correctly return string when using toString directly', () => {
-    expect(length(1, 'cm').toString()).toEqual('1cm');
-    expect(length(0.092, 'dm').toString()).toEqual('0.092dm');
-    expect(length(30, 'mi').toString()).toEqual('30mi');
-  })
+    for (let i = 0; i < tests.length; i++) {
+      expect(length(tests[i][0], tests[i][1]).toString()).toEqual(tests[i][0] + tests[i][1]);
+    }
+  });
 
   it('Should correctly return string when using toString indirectly', () => {
-    expect('' + length(1, 'cm')).toEqual('1cm');
-    expect('' + length(0.092, 'dm')).toEqual('0.092dm');
-    expect('' + length(30, 'mi')).toEqual('30mi');
-  })
-})
+    for (let i = 0; i < tests.length; i++) {
+      expect(`${length(tests[i][0], tests[i][1])}`).toEqual(tests[i][0] + tests[i][1]);
+    }
+  });
+});

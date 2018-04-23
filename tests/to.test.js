@@ -46,12 +46,12 @@ describe('to()', () => {
 
   it('Should correctly convert nanometers to centimeters', () => {
     const value = 1;
-    expect(length(value, 'nm').to('cm')).toEqual({ value: 10 ** -7, unit: 'cm'})
+    expect(length(value, 'nm').to('cm')).toEqual({ value: 1.0000000000000001e-7, unit: 'cm'})
   });
 
   it('Should correctly convert  micrometers to centimeters', () => {
     const value = 1
-    expect(length(value, 'um').to('cm')).toEqual({ value: 10 ** -4, unit: 'cm' })
+    expect(length(value, 'um').to('cm')).toEqual({ value: 0.00009999999999999999, unit: 'cm' })
   });
 
   it('Should correctly convert picometers to centimeters', () => {

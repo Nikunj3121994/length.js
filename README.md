@@ -87,17 +87,21 @@ Creates an object which contains value, unit, and conversion methods.
   * **``pm``**: picometre,
   * **``nm``**: nanometre,
   * **``um``**: micrometre,
-  * **``mm``**: milimeter,
-  * **``cm``**: centimeter,
-  * **``dm``**: decimeter,
-  * **``m``**: meter,
-  * **``km``**: kilometer,
+  * **``mm``**: millimetre,
+  * **``cm``**: centimetre,
+  * **``dm``**: decimetre,
+  * **``m``**: metre,
+  * **``dam``**: dacametre,
+  * **``hm``**: hectoametre,
+  * **``km``**: kilometre,
+  * **``nmi``**: nautical mile,
   * **``ft``**: foot,
   * **``in``**: inch,
   * **``yd``**: yard,
   * **``mi``**: mile,
   * **``au``**: astronomical unit,
-  * **``ly``**: light year.
+  * **``ly``**: light year,
+  * **``pc``**: parsec.
 
 #### Returns
 * _**``(Object)``**_: New **Length** object.

@@ -2,7 +2,7 @@ import { Length, length } from './lib/length';
 import { to, add, getString, getUnit, getValue, toPrecision } from './lib/functions';
 
 // Initialize Length object prototype.
-var proto = Length.prototype = {};
+var proto = Length.prototype;
 
 // Add current version number to Length object prototype.
 proto.version = '0.0.8';

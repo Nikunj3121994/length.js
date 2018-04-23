@@ -1,5 +1,5 @@
 /*!
- * length.js v0.0.8 (https://github.com/appalaszynski/length.js)
+ * length.js v0.0.9 (https://github.com/appalaszynski/length.js)
  * Copyright (c) 2018 appalaszynski (https://github.com/appalaszynski)
  * Licensed under MIT (https://github.com/appalaszynski/length.js/blob/master/LICENSE)
  */
@@ -11,22 +11,26 @@
   }
 }(this, (function () { 'use strict';
 
-  // This object stores information about dependences between units and centimeter.
+  // This object stores information about dependences between units and meter.
   var standardUnitDependences = {
     pm: Math.pow(10, -12),
-    nm: Math.pow(10, -7),
-    um: Math.pow(10, -4),
-    mm: 0.1,
-    cm: 1,
-    dm: 10,
-    m: Math.pow(10, 2),
-    km: Math.pow(10, 5),
-    in: 2.54,
-    ft: 30.48,
-    yd: 91.44,
-    mi: 160934.4,
-    au: 14959787069100,
-    ly: 946073047258080000,
+    nm: Math.pow(10, -9),
+    um: Math.pow(10, -6),
+    mm: Math.pow(10, -3),
+    cm: Math.pow(10, -2),
+    dm: Math.pow(10, -1),
+    m: 1,
+    dam: Math.pow(10, 1),
+    hm: Math.pow(10, 2),
+    km: Math.pow(10, 3),
+    nmi: 1852,
+    in: 0.0254,
+    ft: 0.3048,
+    yd: 0.9144,
+    mi: 1609.344,
+    au: 149597870700,
+    ly: 9460730472580800,
+    pc: (648000 / Math.PI) * 149597870700,
   };
 
   // Array of currently supported units.
@@ -143,10 +147,10 @@
   }
 
   // Initialize Length object prototype.
-  var proto = Length.prototype = {};
+  var proto = Length.prototype;
 
   // Add current version number to Length object prototype.
-  proto.version = '0.0.8';
+  proto.version = '0.0.9';
 
   // Add functions to Length object prototype.
   proto.to = to;

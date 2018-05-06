@@ -17,23 +17,6 @@
       <img src="https://coveralls.io/repos/github/appalaszynski/length.js/badge.svg?branch=master" />
     </a>
   </p>
-  <p>
-    <a href="https://github.com/appalaszynski/length.js/commits/master">
-      <img src="https://img.shields.io/github/last-commit/appalaszynski/length.js.svg" />
-    </a>
-    <a href="https://www.npmjs.com/package/length.js">
-      <img src="https://img.shields.io/npm/dt/length.js.svg" />
-    </a>
-    <a href="https://github.com/appalaszynski/mac-setup/stargazers">
-      <img src="https://img.shields.io/github/stars/appalaszynski/length.js.svg" />
-    </a>
-    <a href="https://github.com/appalaszynski/length.js/network/members">
-      <img src="https://img.shields.io/github/forks/appalaszynski/length.js.svg" />
-    </a>
-    <a href="https://github.com/appalaszynski/length.js/graphs/contributors">
-      <img src="https://img.shields.io/github/contributors/appalaszynski/length.js.svg" />
-    </a>
-  </p>
   <br>
   <br>
 </div>
@@ -42,7 +25,7 @@
 
 ## Installation
 
-**Length** was designed to work both in the browser and in Node.js.
+**Length.js** was designed to work both in the browser and in Node.js.
 
 ### Browser
 
@@ -50,12 +33,12 @@
 <script src="length.js"></script>
 ```
 
-**Length** is available on **unpkg CDN** in [compressed](https://unpkg.com/length.js/min/length.min.js) and [uncompressed](https://unpkg.com/length.js) version.
+**Length.js** is available on **unpkg CDN** in [compressed](https://unpkg.com/length.js/min/length.min.js) and [uncompressed](https://unpkg.com/length.js) version.
 
 ### Node.js
 
 ```shell
-npm install length.js
+$ npm install length.js
 ```
 
 ```javascript
@@ -68,16 +51,16 @@ import length from 'length.js';
 
 ## Usage
 
-**Length** creates an object which contains **value**, **unit**, and **conversion** methods.  
-To get this object, simply call [**``length()``**](#lengthvalue-unit) with two supported arguments. Then you can convert passed value by calling one of available [method](#methods).  
+**Length.js** creates an object which contains **value** and **unit**.
+To get this object, simply call [``length()``](#lengthvalue-unit) with two supported arguments. Then you can call available [methods](#methods).  
   
-The **Length** prototype is exposed through **``length.fn``** (if you want to add your own functions).
+The **``Length``** prototype is exposed through **``length.fn``** (if you want to add your own functions).
 
 <hr />
 
 ### ``length(value, unit)``
 
-Creates an object which contains value, unit, and conversion methods.
+Creates an object which contains value and unit.
 
 #### Arguments
 * **value** _**``(Number)``**_: Number of units.
@@ -104,7 +87,7 @@ Creates an object which contains value, unit, and conversion methods.
   * **``pc``**: parsec.
 
 #### Returns
-* _**``(Object)``**_: New **Length** object.
+* _**``(Object)``**_: New **``Length``** object.
 
 #### Example
 ```javascript
@@ -119,10 +102,10 @@ length(12, 'cm');
 ### ``.to(unit)``
 
 #### Arguments
-* **unit** _**``(String)``**_: Unit type. [Available unit types](#arguments).
+* **unit** _**``(String)``**_: Unit type.
 
 #### Returns
-* _**``(Object)``**_: New **Length** object with value converted to passed unit.
+* _**``(Object)``**_: New **``Length``** object with value converted to passed unit.
 
 #### Example
 ```javascript
@@ -130,6 +113,45 @@ length(100, 'cm').to('m');
 // => { value: 1, unit: 'm' }
 ```
  
+---
+
+### ``.add(value, [unit])``
+
+#### Arguments
+* **value** _**``(Number)``**_: The number to increment value.
+* **[unit]** _**``(String)``**_: Unit type in which the value was given.
+
+#### Returns
+* _**``(Object)``**_: New **``Length``** object with incremented value.
+
+#### Example
+```javascript
+length(100, 'cm').add(2);
+// => { value: 102, unit: 'cm' }
+length(100, 'cm').add(2, 'dm');
+// => { value: 120, unit: 'cm' }
+```
+
+---
+
+### ``.toPrecision([digits])``
+
+#### Arguments
+* **[digits]** _**``(Number)``**_: The number of digits to appear after the decimal point.
+
+#### Returns
+* _**``(Object)``**_: New **``Length``** object with fixed value.
+
+#### Example
+```javascript
+length(100, 'cm').toPrecision();
+// => { value: 100, unit: 'cm' }
+length(100, 'cm').toPrecision(2);
+// => { value: 100, unit: 'cm' }
+length(0.97982, 'cm').toPrecision(2);
+// => { value: 0.98, unit: 'cm' }
+```
+
 ---
 
 ### ``.getValue()``
@@ -158,7 +180,7 @@ length(100, 'cm').getUnit();
 
 ---
 
-### ``.getString()``
+### ``.getString()``, ``.toString()``
 
 #### Returns
 * _**``(String)``**_: String containing value and unit type.
@@ -166,46 +188,8 @@ length(100, 'cm').getUnit();
 #### Example
 ```javascript
 length(100, 'cm').getString();
+length(100, 'cm').toString();
 // => 100cm
-length(30, 'cm').to('ft').getString();
-// => 0.984251968503937ft
-```
-
----
-
-### ``.add(value, unit)``
-
-#### Arguments
-* **value** _**``(Number)``**_: The number to increment value.
-* **unit** _**``(String)``**_: Unit type. **Not required.**
-
-#### Returns
-* _**``(Object)``**_: New **Length** object with incremented value.
-
-#### Example
-```javascript
-length(100, 'cm').add(2);
-// => { value: 102, unit: 'cm' }
-length(100, 'cm').add(2, 'dm');
-// => { value: 120, unit: 'cm' }
-```
-
----
-
-### ``.toPrecision(digits)``
-
-#### Arguments
-* **digits** _**``(Number)``**_: The number of digits to appear after the decimal point.
-
-#### Returns
-* _**``(Object)``**_: New **Length** object with fixed value.
-
-#### Example
-```javascript
-length(100, 'cm').toPrecision();
-// => { value: 100, unit: 'cm' }
-length(100, 'cm').toPrecision(2);
-// => { value: 100, unit: 'cm' }
-length(30, 'cm').to('ft').toPrecision(2);
-// => { value: 0.98, unit: 'cm' }
+console.log(length(10, 'm') + '');
+// => 10m
 ```

@@ -81,7 +81,7 @@
     return new Length(value, unit);
   };
 
-  // Function converts value in passed unit to value in standard unit - centimeter.
+  // Function converts value in passed unit to value in standard unit.
   function getValueInStandardUnit(value, unit) {
     if (standardUnitDependences[unit] !== undefined) {
       return value * standardUnitDependences[unit]

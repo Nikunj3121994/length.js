@@ -14,6 +14,7 @@ var standardUnitDependences = {
   in: 0.0254,
   ft: 0.3048,
   yd: 0.9144,
+  fm: 1.8288,
   mi: 1609.344,
   au: 149597870700,
   ly: 9460730472580800,

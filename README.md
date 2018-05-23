@@ -81,6 +81,7 @@ Creates an object which contains value and unit.
   * **``ft``**: foot,
   * **``in``**: inch,
   * **``yd``**: yard,
+  * **``fm``**: fathom,
   * **``mi``**: mile,
   * **``au``**: astronomical unit,
   * **``ly``**: light year,

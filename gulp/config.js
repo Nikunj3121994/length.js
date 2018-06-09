@@ -1,27 +1,37 @@
-// Get arguments passed as '--name value'
-const arg = (argList => {
-  let arg = {}, a, opt, thisOpt, curOpt;
-  for (a = 0; a < argList.length; a++) {
+const argumentsList = (argList => {
+  let arg = {}, argument, argumentWithoutDashes, isValue;
 
-    thisOpt = argList[a].trim();
-    opt = thisOpt.replace(/^\-+/, '');
+  for (let i = 0; i < argList.length; i++) {
 
-    if (opt === thisOpt) {
-      // Argument value
-      if (curOpt) arg[curOpt] = opt;
-      curOpt = null;
+    // Trim argument.
+    argument = argList[i].trim();
+    // Remove -- from argument.
+    argumentWithoutDashes = argument.replace(/^\-+/, '');
 
+    // If you run Node command with e.g. `--foo bar` it will be presented in process.argv array
+    // as [ '--foo', 'bar' ]. So, if argument is equal to argument without -- it means one of two things:
+    // - argument is not passed by user
+    // - argument is value of previous argument.
+    if (argumentWithoutDashes === argument) {
+      // If argument is value of previous argument save it as value in `arg` object.
+      if (isValue) {
+        arg[isValue] = argumentWithoutDashes;
+      }
+      isValue = false;
     }
+    // If argument is not equal to argument without -- it means that was passed by user
+    // and next argument will be value of that argument.
     else {
-      // Argument name
-      curOpt = opt;
-      arg[curOpt] = true;
+      // Add argument to `isValue` variable and to `arg` object.
+      isValue = argumentWithoutDashes;
+      arg[isValue] = true;
     }
   }
 
+  // Return `arg` object.
   return arg;
 })(process.argv);
 
 module.exports = {
-  versionNumber: arg.versionNumber,
+  versionNumber: argumentsList.versionNumber,
 };

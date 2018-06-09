@@ -1,6 +1,13 @@
-const gulp = require('gulp');
-const replace = require('gulp-replace');
+const gulp              = require('gulp');
+const replace           = require('gulp-replace');
 const { versionNumber } = require('../config');
+
+// Below tasks are run in sequence. They replace the version number provided by user in following files:
+// - package.json
+// - package-lock.json
+// - lenght.js
+// - src/lenght.js
+// - templates/header.js
 
 gulp.task('stringReplacePackageJson', function () {
   return gulp.src('./package.json')

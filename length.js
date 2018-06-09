@@ -1,5 +1,5 @@
 /*!
- * length.js v1.0.0 (https://github.com/appalaszynski/length.js)
+ * length.js v1.0.1 (https://github.com/appalaszynski/length.js)
  * Copyright (c) 2018 appalaszynski (https://github.com/appalaszynski)
  * Licensed under MIT (https://github.com/appalaszynski/length.js/blob/master/LICENSE)
  */
@@ -151,7 +151,7 @@
   var proto = Length.prototype;
 
   // Add current version number to Length object prototype.
-  proto.version = '1.0.0';
+  proto.version = '1.0.1';
 
   // Add functions to Length object prototype.
   proto.to = to;

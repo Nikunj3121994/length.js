@@ -67,25 +67,25 @@ Creates an object which contains value and unit.
 * **unit** _**``(String)``**_: Unit type.  
   
   Available unit types: 
-  * **``pm``**: picometre,
-  * **``nm``**: nanometre,
-  * **``um``**: micrometre,
-  * **``mm``**: millimetre,
-  * **``cm``**: centimetre,
-  * **``dm``**: decimetre,
+  * **``pm``**: picometre: _(1 / 1 000 000 000 000) m_,
+  * **``nm``**: nanometre: _(1 / 1 000 000 000) m_,
+  * **``um``**: micrometre: _(1 / 1 000 000) m_,
+  * **``mm``**: millimetre: _(1 / 1 000) m_,
+  * **``cm``**: centimetre: _(1 / 100) m_,
+  * **``dm``**: decimetre: _(1 / 10) m_,
   * **``m``**: metre,
-  * **``dam``**: dacametre,
-  * **``hm``**: hectoametre,
-  * **``km``**: kilometre,
-  * **``nmi``**: nautical mile,
-  * **``ft``**: foot,
-  * **``in``**: inch,
-  * **``yd``**: yard,
-  * **``fm``**: fathom,
-  * **``mi``**: mile,
-  * **``au``**: astronomical unit,
-  * **``ly``**: light year,
-  * **``pc``**: parsec.
+  * **``dam``**: decametre: _10 m_,
+  * **``hm``**: hectoametre: _100 m_,
+  * **``km``**: kilometre: _1 000 m_,
+  * **``nmi``**: nautical mile: _1 852 m_,
+  * **``ft``**: foot: _0.3048 m_,
+  * **``in``**: inch: _0.0254 m_,
+  * **``yd``**: yard: _0.9144 m_,
+  * **``fm``**: fathom: _1.8288 m_,
+  * **``mi``**: mile: _1 609.344 m_,
+  * **``au``**: astronomical unit: _149 597 870 700 m_,
+  * **``ly``**: light year: _9 460 730 472 580 800 m_,
+  * **``pc``**: parsec: _((648 000 / π) * 149 597 870 700) m_.
 
 #### Returns
 * _**``(Object)``**_: New **``Length``** object.

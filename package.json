@@ -28,15 +28,15 @@
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-jest": "^22.4.3",
-    "babel-preset-env": "^1.6.1",
-    "coveralls": "^3.0.0",
+    "babel-jest": "^23.0.1",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.1",
     "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.6.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.0",
-    "jest": "^22.4.3",
-    "rollup": "^0.58.2",
+    "jest": "^23.1.0",
+    "rollup": "^0.60.1",
     "run-sequence": "^2.2.1"
   }
 }

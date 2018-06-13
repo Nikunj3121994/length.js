@@ -1,4 +1,4 @@
-// This object stores information about dependences between units and meter.
+// This object stores information about dependences between available units and meter.
 var standardUnitDependences = {
   pm: Math.pow(10, -12),
   nm: Math.pow(10, -9),
@@ -21,7 +21,7 @@ var standardUnitDependences = {
   pc: (648000 / Math.PI) * 149597870700,
 };
 
-// Array of currently supported units.
+// Array of available units.
 var supportedUnits = Object.keys(standardUnitDependences);
 
 export { standardUnitDependences, supportedUnits };

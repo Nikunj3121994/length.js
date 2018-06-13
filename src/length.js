@@ -12,11 +12,10 @@ proto.to = to;
 proto.add = add;
 proto.getValue = getValue;
 proto.getUnit = getUnit;
-proto.getString = getString;
-proto.toString = getString;
+proto.getString = proto.toString = getString;
 proto.toPrecision = toPrecision;
 
-// Expose Length object prototype if user wants to add new functions.
+// Expose Length object prototype (if user wants to add new functions).
 length.fn = proto;
 
 export default length;

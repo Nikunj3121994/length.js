@@ -2,7 +2,6 @@ const gulp   = require('gulp');
 const rollup = require('rollup').rollup;
 const fs     = require('fs');
 
-
 gulp.task('build', function() {
   const rollupOpts = {
     // Entry file.

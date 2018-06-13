@@ -1,5 +1,5 @@
 /*!
- * length.js v1.0.1 (https://github.com/appalaszynski/length.js)
+ * length.js v1.0.2 (https://github.com/appalaszynski/length.js)
  * Copyright (c) 2018 appalaszynski (https://github.com/appalaszynski)
  * Licensed under MIT (https://github.com/appalaszynski/length.js/blob/master/LICENSE)
  */

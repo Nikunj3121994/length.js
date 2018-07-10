@@ -1,23 +1,25 @@
 <div align="center">
+  <a href="https://github.com/appalaszynski/length">
+    <img src="https://user-images.githubusercontent.com/35331661/42526556-6ea55d0e-8476-11e8-8a32-e552ec5c0497.png" height="125px">
+  </a>
   <h1>Length.js</h1>
   <p>
-    <em> JavaScript library for length units conversion</em>
+    <em>JavaScript Library for Length Units Conversion</em>
   </p>
   <p>
     <a href="https://www.npmjs.com/package/length.js">
-      <img src="https://img.shields.io/npm/v/length.js.svg" />
+      <img src="https://img.shields.io/npm/v/length.js.svg" alt="Version" />
     </a>
     <a href="https://github.com/appalaszynski/length.js/blob/master/LICENSE">
-      <img src="https://img.shields.io/npm/l/length.js.svg" />
+      <img src="https://img.shields.io/npm/l/length.js.svg" alt="License" />
     </a>
     <a href="https://travis-ci.org/appalaszynski/length.js">
-      <img src="https://travis-ci.org/appalaszynski/length.js.svg?branch=master" />
+      <img src="https://travis-ci.org/appalaszynski/length.js.svg?branch=master" alt="Build Status" />
     </a>
     <a href="https://coveralls.io/github/appalaszynski/length.js">
-      <img src="https://coveralls.io/repos/github/appalaszynski/length.js/badge.svg?branch=master" />
+      <img src="https://coveralls.io/repos/github/appalaszynski/length.js/badge.svg?branch=master" alt="Coverage Status" />
     </a>
   </p>
-  <br>
   <br>
 </div>
 
@@ -83,6 +85,7 @@ Creates an object which contains value and unit.
   * **``yd``**: yard: _0.9144 m_,
   * **``fm``**: fathom: _1.8288 m_,
   * **``mi``**: mile: _1 609.344 m_,
+  * **``ld``**: lunar distance: _384 402 000 m_,
   * **``au``**: astronomical unit: _149 597 870 700 m_,
   * **``ly``**: light year: _9 460 730 472 580 800 m_,
   * **``pc``**: parsec: _((648 000 / π) * 149 597 870 700) m_.

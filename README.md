@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/appalaszynski/length">
+  <a href="https://github.com/appalaszynski/length.js">
     <img src="https://user-images.githubusercontent.com/35331661/42526556-6ea55d0e-8476-11e8-8a32-e552ec5c0497.png" height="125px">
   </a>
   <h1>Length.js</h1>
@@ -22,6 +22,16 @@
   </p>
   <br>
 </div>
+
+---
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Methods](#methods)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
@@ -58,7 +68,7 @@ To get this object, simply call [``length()``](#lengthvalue-unit) with two suppo
   
 The **``Length``** prototype is exposed through **``length.fn``** (if you want to add your own functions).
 
-<hr />
+<br>
 
 ### ``length(value, unit)``
 
@@ -117,7 +127,7 @@ length(100, 'cm').to('m');
 // => { value: 1, unit: 'm' }
 ```
  
----
+<br>
 
 ### ``.add(value, [unit])``
 
@@ -136,7 +146,7 @@ length(100, 'cm').add(2, 'dm');
 // => { value: 120, unit: 'cm' }
 ```
 
----
+<br>
 
 ### ``.toPrecision([digits])``
 
@@ -156,7 +166,7 @@ length(0.97982, 'cm').toPrecision(2);
 // => { value: 0.98, unit: 'cm' }
 ```
 
----
+<br>
 
 ### ``.getValue()``
 
@@ -169,7 +179,7 @@ length(100, 'cm').getValue();
 // => 100
 ```
 
----
+<br>
 
 ### ``.getUnit()``
 
@@ -182,7 +192,7 @@ length(100, 'cm').getUnit();
 // => cm
 ```
 
----
+<br>
 
 ### ``.getString()``, ``.toString()``
 
@@ -197,3 +207,15 @@ length(100, 'cm').toString();
 console.log(length(10, 'm') + '');
 // => 10m
 ```
+
+---
+
+## Contributing
+
+All contributions and suggestions are welcome! For suggested improvements, please [create an issue](https://github.com/appalaszynski/length.js/issues). For direct contributions, please [fork](https://github.com/appalaszynski/length.js/fork) the repository, create your feature branch, commit your changes, push commits to the branch and create a new [Pull Request](https://github.com/appalaszynski/length.js/pulls).
+
+---
+
+## License
+
+The code is open source and available under the [MIT License](https://github.com/appalaszynski/length.js/blob/master/LICENSE).

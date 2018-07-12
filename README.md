@@ -212,7 +212,7 @@ console.log(length(10, 'm') + '');
 
 ## Contributing
 
-All contributions and suggestions are welcome! For suggested improvements, please [create an issue](https://github.com/appalaszynski/length.js/issues). For direct contributions, please [fork](https://github.com/appalaszynski/length.js/fork) the repository, create your feature branch, commit your changes, push commits to the branch and create a new [Pull Request](https://github.com/appalaszynski/length.js/pulls).
+All contributions and suggestions are welcome! For suggested improvements, please create an [issue](https://github.com/appalaszynski/length.js/issues). For direct contributions, please [fork](https://github.com/appalaszynski/length.js/fork) the repository, create your feature branch, commit your changes, push commits to the branch and create a new [pull request](https://github.com/appalaszynski/length.js/pulls).
 
 ---
 

@@ -14,7 +14,7 @@
   ],
   "main": "length.js",
   "scripts": {
-    "bump": "gulp bump --versionNumber",
+    "bump": "node scripts/bump",
     "build": "gulp build",
     "test": "jest --coverage --config=jest.config.json"
   },
@@ -36,6 +36,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.0",
     "jest": "^23.4.0",
+    "prompt": "^1.0.0",
     "rollup": "^0.62.0"
   }
 }

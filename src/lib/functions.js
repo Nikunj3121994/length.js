@@ -5,10 +5,8 @@ import { getValueInStandardUnit, getValueByUnit } from './standard';
 function to(unit) {
   validateUnit(unit);
 
-  // Convert value in current unit to value in standard unit.
   var valueInStandardUnit = getValueInStandardUnit(this.value, this.unit);
 
-  // Convert value in standard unit to value in unit passed by user.
   var convertedValue = getValueByUnit(valueInStandardUnit, unit);
 
   return length(convertedValue, unit);
@@ -23,7 +21,7 @@ function add(value, unit) {
   } else {
     validate(value, unit);
 
-    // If passed value is equal to 0, just return the same Length object.
+    // If passed value is equal to 0, just return the same Length object
     if (value === 0) return length(this.value, this.unit);
 
     var newValue = this.value + length(value, unit).to(this.unit).getValue();

@@ -8,7 +8,7 @@ var errors = {
   noUnitAndValue: 'You have to pass value and unit type!',
 };
 
-// Checl if value and unit are valid.
+// Check if value and unit are valid
 function validate(value, unit) {
   if (typeof value === 'undefined' || typeof unit === 'undefined') {
     throw Error(errors.noUnitAndValue);
@@ -20,7 +20,7 @@ function validate(value, unit) {
 };
 
 
-// Simpler version of validate() function - checks only unit correctness.
+// Simpler version of validate() function - checks only unit correctness
 function validateUnit(unit) {
   if (typeof unit === 'undefined') {
     throw Error(errors.noUnit);
@@ -30,7 +30,7 @@ function validateUnit(unit) {
 };
 
 
-// Simpler version of validate() function - checks only value correctness.
+// Simpler version of validate() function - checks only value correctness
 function validateValue(value) {
   if (typeof value === 'undefined') {
     throw Error(erros.noValue);

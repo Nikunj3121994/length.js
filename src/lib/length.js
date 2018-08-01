@@ -1,6 +1,6 @@
 import { validate } from './validate';
 
-// Length object constructor.
+// Length constructor
 function Length(value, unit) {
   validate(value, unit);
 
@@ -11,7 +11,7 @@ function Length(value, unit) {
 
 /**
  * Main function (available by global.length) which allows to
- * create new Length object by 'length()' instead of 'new Length()'.
+ * create new Length object by 'length()' instead of 'new Length()'
  */
 var length = function (value, unit) {
   return new Length(value, unit);

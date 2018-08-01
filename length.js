@@ -1,5 +1,5 @@
 /*!
- * length.js v1.0.3 (https://github.com/appalaszynski/length.js)
+ * length.js v1.0.4 (https://github.com/appalaszynski/length.js)
  * Copyright (c) 2018 appalaszynski (https://github.com/appalaszynski)
  * Licensed under MIT (https://github.com/appalaszynski/length.js/blob/master/LICENSE)
  */
@@ -11,7 +11,7 @@
   }
 }(this, (function () { 'use strict';
 
-  // This object stores information about dependences between available units and meter.
+  // This object stores information about dependences between available units and meter
   var standardUnitDependences = {
     pm: Math.pow(10, -12),
     nm: Math.pow(10, -9),
@@ -35,7 +35,7 @@
     pc: (648000 / Math.PI) * 149597870700,
   };
 
-  // Array of available units.
+  // Array of available units
   var supportedUnits = Object.keys(standardUnitDependences);
 
   var errors = {
@@ -46,7 +46,7 @@
     noUnitAndValue: 'You have to pass value and unit type!',
   };
 
-  // Checl if value and unit are valid.
+  // Check if value and unit are valid
   function validate(value, unit) {
     if (typeof value === 'undefined' || typeof unit === 'undefined') {
       throw Error(errors.noUnitAndValue);
@@ -57,7 +57,7 @@
     }
   }
 
-  // Simpler version of validate() function - checks only unit correctness.
+  // Simpler version of validate() function - checks only unit correctness
   function validateUnit(unit) {
     if (typeof unit === 'undefined') {
       throw Error(errors.noUnit);
@@ -66,7 +66,7 @@
     }
   }
 
-  // Simpler version of validate() function - checks only value correctness.
+  // Simpler version of validate() function - checks only value correctness
   function validateValue(value) {
     if (typeof value === 'undefined') {
       throw Error(erros.noValue);
@@ -75,7 +75,7 @@
     }
   }
 
-  // Length object constructor.
+  // Length constructor
   function Length(value, unit) {
     validate(value, unit);
 
@@ -85,13 +85,13 @@
 
   /**
    * Main function (available by global.length) which allows to
-   * create new Length object by 'length()' instead of 'new Length()'.
+   * create new Length object by 'length()' instead of 'new Length()'
    */
   var length = function (value, unit) {
     return new Length(value, unit);
   };
 
-  // Convert value in passed unit to value in standard unit.
+  // Convert value in passed unit to value in standard unit
   function getValueInStandardUnit(value, unit) {
     if (standardUnitDependences[unit] !== undefined) {
       return value * standardUnitDependences[unit]
@@ -99,7 +99,7 @@
     return undefined;
   }
 
-  // Convert value in standard unit to value in passed unit.
+  // Convert value in standard unit to value in passed unit
   function getValueByUnit(value, unit) {
     if (standardUnitDependences[unit] !== undefined) {
       return value * (1 / standardUnitDependences[unit])
@@ -110,10 +110,8 @@
   function to(unit) {
     validateUnit(unit);
 
-    // Convert value in current unit to value in standard unit.
     var valueInStandardUnit = getValueInStandardUnit(this.value, this.unit);
 
-    // Convert value in standard unit to value in unit passed by user.
     var convertedValue = getValueByUnit(valueInStandardUnit, unit);
 
     return length(convertedValue, unit);
@@ -127,7 +125,7 @@
     } else {
       validate(value, unit);
 
-      // If passed value is equal to 0, just return the same Length object.
+      // If passed value is equal to 0, just return the same Length object
       if (value === 0) return length(this.value, this.unit);
 
       var newValue = this.value + length(value, unit).to(this.unit).getValue();
@@ -153,13 +151,13 @@
     return length(parseFloat(value), this.unit);
   }
 
-  // Initialize Length object prototype.
+  // Initialize Length object prototype
   var proto = Length.prototype;
 
-  // Add current version number to Length object prototype.
-  proto.version = '1.0.3';
+  // Add current version number to Length object prototype
+  proto.version = '1.0.4';
 
-  // Add functions to Length object prototype.
+  // Add functions to Length object prototype
   proto.to = to;
   proto.add = add;
   proto.getValue = getValue;
@@ -167,7 +165,7 @@
   proto.getString = proto.toString = getString;
   proto.toPrecision = toPrecision;
 
-  // Expose Length object prototype (if user wants to add new functions).
+  // Expose Length object prototype (if user wants to add new functions)
   length.fn = proto;
 
   return length;

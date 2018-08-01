@@ -10,7 +10,11 @@
     "javascript",
     "library",
     "units",
-    "conversion"
+    "conversion",
+    "metrics",
+    "measurements",
+    "measure",
+    "distance"
   ],
   "main": "length.js",
   "scripts": {

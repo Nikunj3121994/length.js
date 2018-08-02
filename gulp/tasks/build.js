@@ -1,17 +1,23 @@
 const gulp = require('gulp');
 const rollup = require('rollup').rollup;
 const fs = require('fs');
+const cleanup = require('rollup-plugin-cleanup');
 
 gulp.task('build', function() {
   const rollupOpts = {
     // Entry file.
     input: './src/length.js',
+    plugins: [
+      cleanup({
+        maxEmptyLines: 1,
+      }),
+    ],
   };
   
   const bundleOpts = {
     format: 'umd',
     // Name of generated bundle/library.
-    name: 'length'
+    name: 'length',
   };
 
   return (
@@ -32,7 +38,7 @@ gulp.task('build', function() {
           // Save fixed code.
           fs.writeFile('./length.js', fixed, (err) => {
             if (err) throw err;
-            console.log("\x1b[1m\x1b[32m%s\x1b[0m", '\n    length.js generated correctly!\n');
+            console.log('\x1b[1m\x1b[32m%s\x1b[0m', '\n    length.js generated correctly!\n');
           });
         });
       })

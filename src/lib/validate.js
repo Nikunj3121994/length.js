@@ -13,12 +13,11 @@ function validate(value, unit) {
   if (typeof value === 'undefined' || typeof unit === 'undefined') {
     throw Error(errors.noUnitAndValue);
   } else if (typeof value !== 'number') {
-    throw Error(erros.valueType);
+    throw Error(errors.valueType);
   } else if (supportedUnits.indexOf(unit) == -1) {
     throw Error(errors.unsupportedValue);
   }
-};
-
+}
 
 // Simpler version of validate() function - checks only unit correctness
 function validateUnit(unit) {
@@ -27,16 +26,15 @@ function validateUnit(unit) {
   } else if (supportedUnits.indexOf(unit) == -1) {
     throw Error(errors.unsupportedValue);
   }
-};
-
+}
 
 // Simpler version of validate() function - checks only value correctness
 function validateValue(value) {
   if (typeof value === 'undefined') {
-    throw Error(erros.noValue);
+    throw Error(errors.noValue);
   } else if (typeof value !== 'number') {
-    throw Error(erros.valueMustBeNumber);
+    throw Error(errors.valueMustBeNumber);
   }
-};
+}
 
 export { validate, validateUnit, validateValue };

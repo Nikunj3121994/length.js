@@ -2,11 +2,11 @@ const prompt = require('prompt');
 const gulp = require('gulp');
 require('../gulpfile');
 
-prompt.message = "";
+prompt.message = '';
 
 const schema = {
   properties: {
-    "version_number": {
+    'version_number': {
       pattern: /^(\d+).(\d+).(\d+)$/,
       message: 'Incorrect version number!',
       required: true,

@@ -6,8 +6,7 @@ function Length(value, unit) {
 
   this.value = value;
   this.unit = unit;
-};
-
+}
 
 /**
  * Main function (available by global.length) which allows to

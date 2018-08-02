@@ -6,6 +6,6 @@ gulp.task('bump', function (done) {
     'stringReplaceLengthJs',
     'stringReplaceHeaderJs',
     'stringReplaceSrcLengthJs',
-    'uglify'
+    'uglify',
   ])(done);
 });

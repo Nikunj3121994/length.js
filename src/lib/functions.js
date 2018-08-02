@@ -10,11 +10,10 @@ function to(unit) {
   var convertedValue = getValueByUnit(valueInStandardUnit, unit);
 
   return length(convertedValue, unit);
-};
-
+}
 
 function add(value, unit) {
-  if(typeof unit === 'undefined') {
+  if (typeof unit === 'undefined') {
     validateValue(value);
 
     return length(this.value + value, this.unit);
@@ -28,27 +27,23 @@ function add(value, unit) {
     
     return length(newValue, this.unit);
   }
-};
-
+}
 
 function getValue() {
   return this.value;
-};
-
+}
 
 function getUnit() {
   return this.unit;
-};
-
+}
 
 function getString() {
   return this.value + this.unit;
-};
-
+}
 
 function toPrecision(digits) {
   var value = digits ? this.value.toFixed(digits) : this.value;
   return length(parseFloat(value), this.unit);
-};
+}
 
-export { to, add, getString, getUnit, getValue, toPrecision }
+export { to, add, getString, getUnit, getValue, toPrecision };

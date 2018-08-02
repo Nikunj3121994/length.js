@@ -30,14 +30,14 @@ describe('add()', () => {
   });
 
   it('Should throw error when argument is not passed', () => {
-    expect(() => { length(Math.random(), 'cm').add() }).toThrowError();;
+    expect(() => { length(Math.random(), 'cm').add(); }).toThrowError();
   });
 
   it('Should throw error when argument is not a number', () => {
-    expect(() => { length(Math.random(), 'cm').add('string') }).toThrowError();
-    expect(() => { length(Math.random(), 'cm').add({ key: 'value' }) }).toThrowError();
-    expect(() => { length(Math.random(), 'cm').add([1, 2, 3, 4, 5]) }).toThrowError();
-    expect(() => { length(Math.random(), 'cm').add(() => { }) }).toThrowError();
+    expect(() => { length(Math.random(), 'cm').add('string'); }).toThrowError();
+    expect(() => { length(Math.random(), 'cm').add({ key: 'value' }); }).toThrowError();
+    expect(() => { length(Math.random(), 'cm').add([1, 2, 3, 4, 5]); }).toThrowError();
+    expect(() => { length(Math.random(), 'cm').add(() => { }); }).toThrowError();
   });
 
   it('Should correctly add value in other unit', () => {

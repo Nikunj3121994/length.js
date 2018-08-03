@@ -13,6 +13,7 @@
     "semi": [ "error", "always" ],
     "quotes": [ "error", "single" ],
     "indent": [ "error", 2 ],
+    "no-else-return": "error",
     "comma-dangle": [ "error", "always-multiline" ],
     "key-spacing": [ "error", { "afterColon": true } ],
     "object-curly-spacing": [ "error", "always" ],
@@ -20,7 +21,7 @@
     "keyword-spacing": "error",
     "comma-spacing": [ "error", { "after": true } ],
     "space-infix-ops": "error",
-    "spaced-comment": [ "error", "always", { "exceptions": [ "-", "+" ], "markers": [ "=", "!" ] } ],
+    "spaced-comment": [ "error", "always", { "exceptions": [ "-", "+" ], "markers": [ "=", "!", "?" ] } ],
     "no-multi-spaces": "error"
   }
 }

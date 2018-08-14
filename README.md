@@ -106,7 +106,7 @@ Creates an object which contains value and unit.
 #### Example
 ```javascript
 length(12, 'cm');
-// => { value: 12, unit: 'cm }
+// => { value: 12, unit: 'cm' }
 ```
 
 ---
